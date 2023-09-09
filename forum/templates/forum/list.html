@@ -1,0 +1,7 @@
+<ul>
+    {% for object in data %}
+      <li>
+        <a href="/questions/{{object.id}}">{{object.author}} - {{object.question}} - {{object.create_date}}</a>
+      </li>
+    {% endfor %}
+</ul>
