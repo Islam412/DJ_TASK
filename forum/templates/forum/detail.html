@@ -1,0 +1,12 @@
+<h2>{{question.question}}</h2>
+<h3>{{question.author}}</h3>
+<p>{{question.content}}</p>
+
+<hr>
+
+<h4>Answers</h4>
+<ul>
+    {% for object in answers %}
+      <li> {{object.author}}  -  {{object.answer}}  -  {{object.create_date}} </li>
+    {% endfor %}
+</ul>

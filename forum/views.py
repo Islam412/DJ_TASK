@@ -7,3 +7,10 @@ from .models import Qusetion , Answer
 def qusetions_list(request):
     data = Qusetion.objects.all()
     return render(request,'forum/list.html',{'data':data})
+
+
+
+def qusetions_detail(request, id):
+    question = Qusetion.objects.get(id=id)
+    answers = Answer.objects.filter(qusetion=question)
+    return render(request, 'forum/detail.html', {'question': question,'answers':answers})

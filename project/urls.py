@@ -18,11 +18,12 @@ from django.contrib import admin
 from django.urls import path
 from django.conf import settings
 from django.conf.urls.static import static
-from forum.views import qusetions_list
+from forum.views import qusetions_list , qusetions_detail
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('qusetions/', qusetions_list)
+    path('qusetion/', qusetions_list),
+    path('question/<int:id>', qusetions_detail),
 ]
 
 urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
