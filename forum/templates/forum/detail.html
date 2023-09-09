@@ -10,3 +10,10 @@
       <li> {{object.author}}  -  {{object.answer}}  -  {{object.create_date}} </li>
     {% endfor %}
 </ul>
+<hr>
+<h4>Add your answer</h4>
+<form method="POST">
+    {% csrf_token %}
+    {{form}}
+    <input type="submit" value="Add Answer">
+</form>

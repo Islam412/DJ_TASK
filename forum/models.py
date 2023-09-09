@@ -23,7 +23,7 @@ class Qusetion(models.Model):
 
 class Answer(models.Model):
     author = models.ForeignKey(User , related_name='answer_auther' , on_delete=models.CASCADE)
-    qusetion = models.ForeignKey(Qusetion , related_name='n' , on_delete=models.CASCADE) 
+    question = models.ForeignKey(Qusetion , related_name='n' , on_delete=models.CASCADE) 
     answer = models.TextField(max_length=40000)
     create_date= models.DateTimeField(default=timezone.now)
 

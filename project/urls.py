@@ -22,7 +22,7 @@ from forum.views import qusetions_list , qusetions_detail
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('qusetion/', qusetions_list),
+    path('', qusetions_list),
     path('question/<int:id>', qusetions_detail),
 ]
 
